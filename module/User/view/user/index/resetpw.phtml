@@ -1,0 +1,35 @@
+ <div class='row-fluid' >
+ 	<?php echo $this->translate('Password Setting')?>
+ 	<?php if(isset($error)):?>
+	<div class='btn btn-warning'><strong><?php echo $error?></strong></div><br/>
+	<?php endif;?>
+	<div class="row-fluid">
+		<div id='msg' class='span2 btn btn-warning hide'></div>
+	</div>
+	<form action='/user/index/resetpw' method='post' class='valign'>
+		<div class="row-fluid">
+			<input type='text' class='span2' id='email' name='email' readonly value=<?php echo $this->email?>>
+		</div>
+		<div class='row-fluid'>
+			<input type='password'  class='span2' id='password' name='password' placeholder=<?php echo $this->translate('Password 6~20 characters')?>><label id='pw1'></label>
+		</div>
+		<div class='row-fluid'>
+			<input type='password'  class='span2' name='confirmpw' id='confirmpw' placeholder="<?php echo $this->translate('Confirm Password');?>"><label id='pw2'></label>
+		</div>
+		<input name='verifykey' value="<?php echo $this->verifykey?>" type='hidden'>
+		<div class='row-fluid'>
+		<input type='submit' id='submit' class='span2 btn btn-info  btn-default' value=<?php echo $this->translate('Setting')?>>
+		</div>
+	</form>
+</div>
+<script>
+function checkpw(data)
+{ return data.length>=6}
+function checksamepw(pw1,pw2)
+{ return pw1==pw2}
+$(function(){
+ $('#password').blur(function(){checkpw($(this).val())?$('#pw1').addClass('icon-ok').removeClass('icon-remove'):$('#pw1').addClass('icon-remove').removeClass('icon-ok')})
+ $('#confirmpw').blur(function(){var pw1=$('#pw1').val();checkpw($(this).val(),pw1)?$('#pw2').addClass('icon-ok').removeClass('icon-remove'):$('#pw2').addClass('icon-remove').removeClass('icon-ok')})
+})
+
+</script>

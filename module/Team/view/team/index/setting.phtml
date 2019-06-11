@@ -1,0 +1,58 @@
+<div class='white-bg'>
+	<div class='modal-header'>
+		<?php echo $this->translate('Team Settings')?>
+	</div>
+	<div class='modal-body' style='min-height:500px'>
+		<ul class='nav nav-tabs'>
+			<li id='teamset'  class='active'><a href='/team/index/setting'><?php echo $this->translate('Basic Setting')?></a></li>
+			<li id='membermanage'><a href='/team/index/member'><?php echo $this->translate('Member Manage')?></a></li>
+			<li id='labelmanage'><a href='/dailylog/label/index'><?php echo $this->translate('Category Manage')?></a></li>
+			<li id='statistic'><a href='/dailylog/statistic/month'><?php echo $this->translate('Statistic')?></a></li>
+		</ul>
+		<div id='teamsetdiv' >
+			<form class='form-horizontal span6'>
+				<div class='control-group'>
+					<label class='control-label' for='teamname'><?php echo $this->translate('Team Name')?></label>
+					<input style='margin-top:0' type='text' id='teamname' name='teamname' value="<?php echo $this->teamname?>"/>
+				</div>
+				<div class='control-group'>		
+					<img alt="teamlogo" src="<?php echo ($this->teamlogo)?$this->teamlogo:'/img/teamlogo.jpg'?>" id='teamimg' style='width:60px'>
+					<input type='hidden' name='saveteamlogo' id='saveteamlogo' value=''>
+				<a href='javascript:void(0)' id='teamlogo' class='btn btn-success'/>
+						<?php echo $this->translate('Change Team Logo')?>
+					</a>
+				</div>
+				<input type='submit' class='btn submit' id='teamsetsubmit' value="<?php echo $this->translate('Save')?>">
+			</form>
+		</div>
+	
+	</div>
+	<div class='modal-footer'></div>
+</div>
+<form id='form-t' style='visibility:hidden'>
+	<input type="file" id='teamlogofile' name='teamlogofile' style='position:relative;width:0px;height:0px;z-index:-100'>
+</form>
+<script>
+$(function(){
+	$('#teamlogo').click(function(){
+		$('#teamlogofile').click();
+	})
+	$('#teamlogofile').change(function(data){
+		if($(this).val()=='')return;
+		$('#form-t').ajaxSubmit({
+			url:'/team/index/changelogo',
+			dataType:'json',
+			enctype:'multipart/form-data',
+			type:'POST',
+			success:function(response){
+				if(response['filename']){
+					var file=response['filename'];
+					$('#teamimg').attr('src',file)
+					$('#saveteamlogo').val(response['filename']);
+				}
+			}
+		})
+	})
+})
+
+</script>

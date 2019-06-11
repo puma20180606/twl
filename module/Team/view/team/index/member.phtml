@@ -1,0 +1,54 @@
+<div class='white-bg'>
+	<div class='modal-header'>
+		<?php echo $this->translate('Team Settings')?>
+	</div>
+	<div class='modal-body' style='height:500px'>
+		<ul class='nav nav-tabs'>
+			<li id='teamset'><a href='/team/index/setting'><?php echo $this->translate('Basic Setting')?></a></li>
+			<li id='membermanage'  class='active'><a href='/team/index/member'><?php echo $this->translate('Member Manage')?></a></li>
+			<li id='catmanage'><a href='/dailylog/label/index'><?php echo $this->translate('Category Manage')?></a></li>
+			<li id='statistic'><a href='/dailylog/statistic/month'><?php echo $this->translate('Statistic')?></a></li>
+		</ul>
+		<div id='membermanagediv'>
+			<ul class='unstyled'>
+				<li class='span1 btn'><div id='invite'>+<?php echo $this->translate('Invite')?></div></li>
+				<?php foreach ($this->memberlist as $member):?>
+				<li class='span1 btn'><div><img src="<?php echo ($member['portrait'])?$member['portrait']:'/img/renwu.jpg';?>" style='max-width:80px;max-height:80px'></div><div><?php echo $member['name'];?>
+						<?php if($member['userid']==$this->accountowner):?>
+						 	<div>Account owner</div>
+						<?php else:?>
+							<div>Member</div>
+						<?php endif;?>
+					</div>
+									
+				</li>
+				<?php endforeach;?>
+			</ul>
+		</div>
+	</div>
+	<div>
+	<form action="/team/index/handover" class='form-inline' method='post'>
+		<?php echo $this->translate('The management is handover to')?>
+		<select name='newmanager'>
+			<option></option>
+			<?php foreach ($this->memberlist as $member):?>
+				<?php if($member['userid']!=$this->accountowner):?>
+				<option value=<?php echo $member['userid']?>><?php echo $member['name']?></option>
+				<?php endif;?>
+			<?php endforeach;?>
+		</select>
+		<input class='btn' style='margin-top:0' type='submit' value="<?php echo $this->translate('Handover')?>">
+	</form>
+	</div>
+	<div class='modal-footer'></div>
+</div>
+<script>
+$(function(){
+	$('#invite').click(function(){
+		var dlg=new Dialog("<?php echo $this->translate('Reciept Email Address')?>","Send",0,"<?php echo $this->translate('Close')?>","<?php echo $this->translate('Send')?>");
+		dlg.init()
+		dlg.show()
+	})
+})
+
+</script>

@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-09 11:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:11
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:14
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:8
+msgid "Email"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:14
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:17
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:14
+msgid "Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:18
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:20
+msgid "Login"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:23
+msgid "Forget password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:24
+msgid "Register"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:4
+msgid "Account or Password is wrong"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:11
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:15
+msgid "Team Name"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:17
+msgid "Username"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:20
+msgid "Register Team"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:3
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:7
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:7
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:7
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:7
+msgid "Basic Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:4
+msgid "Email Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:5
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:2
+msgid "Password Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:19
+msgid "Portrait"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:23
+msgid "Click To Change"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:28
+msgid "NickName"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:30
+msgid "Pls input nickname"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:34
+msgid "Mobiel Phone"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:36
+msgid "Pls input your phone number"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:40
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:67
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:92
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:25
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:36
+msgid "Save"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:52
+msgid "Current Email"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:56
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:58
+msgid "New Email"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:61
+msgid "Confirm New Email"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:63
+msgid "Confirm Email"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:78
+msgid "Current Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:82
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:84
+msgid "New Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:86
+msgid "Confirm New Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:88
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:20
+msgid "Confirm Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\userinfo.phtml:4
+msgid "Modify Password"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\userinfo.phtml:5
+msgid "Theme Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:14
+msgid "Pls input your name"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:17
+msgid "Password 6~20 characters"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:23
+msgid "Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:85
+msgid "The passwords input are not same"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:3
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:3
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:3
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:3
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:3
+msgid "Team Settings"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:8
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:8
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:8
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:8
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:8
+msgid "Member Manage"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:9
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:9
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:9
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:9
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:9
+msgid "Category Manage"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:10
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:10
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:10
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:10
+msgid "Statistic"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:30
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:33
+msgid "Add"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\log.phtml:18
+msgid "No recode"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:14
+msgid "Invite"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:31
+msgid "The management is handover to"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:41
+msgid "Handover"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+msgid "Reciept Email Address"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:72
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:106
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:120
+msgid "Close"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+msgid "Send"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:22
+msgid "Change Team Logo"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:6
+msgid "Welcome "
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:11
+msgid "Today:"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:15
+msgid "TimeSpan"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:16
+msgid "Mon"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:17
+msgid "Tues"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:18
+msgid "Wednes"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:19
+msgid "Thurs"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:20
+msgid "Fri"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:21
+msgid "Satur"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:22
+msgid "Sun"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:37
+msgid "Cancel"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:38
+msgid "Delete"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:40
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:49
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:106
+msgid "Edit"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:41
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:50
+msgid "Del"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:42
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:51
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:72
+msgid "Archive"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:43
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:52
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:120
+msgid "Merge"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:7
+msgid "Basi Setting"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:2
+#, php-format
+msgid "Welcome to %sZend Framework 2%s"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:3
+#, php-format
+msgid ""
+"Congratulations! You have successfully installed the %sZF2 Skeleton "
+"Application%s. You are currently running Zend Framework version %s. This "
+"skeleton can serve as a simple starting point for you to begin building your "
+"application on ZF2."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:4
+msgid "Fork Zend Framework 2 on GitHub"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:9
+msgid "Follow Development"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:10
+#, php-format
+msgid ""
+"Zend Framework 2 is under active development. If you are interested in "
+"following the development of ZF2, there is a special ZF2 portal on the "
+"official Zend Framework website which provides links to the ZF2 %swiki%s, %"
+"sdev blog%s, %sissue tracker%s, and much more. This is a great resource for "
+"staying up to date with the latest developments!"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:11
+msgid "ZF2 Development Portal"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:15
+msgid "Discover Modules"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:16
+#, php-format
+msgid ""
+"The community is working on developing a community site to serve as a "
+"repository and gallery for ZF2 modules. The project is available %son GitHub%"
+"s. The site is currently live and currently contains a list of some of the "
+"modules already available for ZF2."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:17
+msgid "Explore ZF2 Modules"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:21
+msgid "Help &amp; Support"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:22
+#, php-format
+msgid ""
+"If you need any help or support while developing with ZF2, you may reach us "
+"via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or "
+"feedback you may have regarding the beta releases. Alternatively, you may "
+"subscribe and post questions to the %smailing lists%s."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:23
+msgid "Ping us on IRC"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:32
+msgid "Worklog"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:80
+#: E:\PHP\project\twl\module\User\view\layout\layout.phtml:35
+msgid "All rights reserved."
+msgstr ""

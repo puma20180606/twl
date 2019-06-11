@@ -1,0 +1,21 @@
+ <div class='span4 offset4 row-fluid' style='margin-top:30%'>
+ <div class='row-fluid'>
+			<select>
+				<option>中文</option>
+				<option>English</option>
+				<option>日本语</option>
+			</select>>
+		</div>
+	<form action='/user/index/login' method='post' class='valign'>
+		<div class="row-fluid">
+			<input type='text' id='email' name='email' placeholder=<?php echo $this->translate('Email')?>>
+		</div>
+		<div class='row-fluid'>
+			<input type='password' id='password' name='password' placeholder=<?php echo $this->translate('Password')?>>
+		</div>
+		
+		<div class='row-fluid'>
+			<input type='submit' id='submit' class='btn btn-info span2 btn-default' value=<?php echo $this->translate('Login')?>>
+		</div>
+	</form>
+</div>

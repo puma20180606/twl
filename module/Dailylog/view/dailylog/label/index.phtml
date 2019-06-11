@@ -1,0 +1,190 @@
+<div class='white-bg'>
+	<div class='modal-header'>
+		<?php echo $this->translate('Team Settings')?>
+	</div>
+	<div class='modal-body' style='height:500px'>
+		<ul class='nav nav-tabs'>
+			<li id='teamset'><a href='/team/index/setting'><?php echo $this->translate('Basic Setting')?></a></li>
+			<li id='membermanage'><a href='/team/index/member'><?php echo $this->translate('Member Manage')?></a></li>
+			<li id='catmanage'   class='active'><a href='/dailylog/label/index'><?php echo $this->translate('Category Manage')?></a></li>
+			<li id='statistic'><a href='/dailylog/statistic/month'><?php echo $this->translate('Statistic')?></a></li>
+		</ul>
+		<div id='catmangediv'>
+			<div class="input-prepend input-append">
+				<div class="btn-group">
+			    <button class="btn dropdown-toggle" id='colorbtn' data-toggle="dropdown">
+			    颜色  
+			      <span class="caret"></span>
+			    </button>
+			    <ul class='dropdown-menu'>
+				    <li>
+					    <table class='colorpicker' id='colorpicker'>
+					    	<tr><td><div id='c0'>&nbsp;</div></td><td><div id='c1'>&nbsp;</div></td><td><div id='c2'>&nbsp;</div></td><td><div id='c3'>&nbsp;</div></td><td><div id='c4'>&nbsp;</div></td><td><div id='c5'>&nbsp;</div></td></tr>
+					    	<tr><td><div id='c6'>&nbsp;</div></td><td><div id='c7'>&nbsp;</div></td><td><div id='c8'>&nbsp;</div></td><td><div id='c9'>&nbsp;</div></td><td><div id='c10'>&nbsp;</div></td><td><div id='c11'>&nbsp;</div></td></tr>
+					    	<tr><td><div id='c12'>&nbsp;</div></td><td><div id='c13'>&nbsp;</div></td><td><div id='c14'>&nbsp;</div></td><td><div id='c15'>&nbsp;</div></td><td><div id='c16'>&nbsp;</div></td><td><div id='c17'>&nbsp;</div></td></tr>
+					    	<tr><td><div id='c18'>&nbsp;</div></td><td><div id='c19'>&nbsp;</div></td><td><div id='c20'>&nbsp;</div></td><td><div id='c21'>&nbsp;</div></td><td><div id='c22'>&nbsp;</div></td><td><div id='c23'>&nbsp;</div></td></tr>
+					    	<tr><td><div id='c24'>&nbsp;</div></td><td><div id='c25'>&nbsp;</div></td><td><div id='c26'>&nbsp;</div></td><td><div id='c27'>&nbsp;</div></td><td><div id='c28'>&nbsp;</div></td><td><div id='c29'>&nbsp;</div></td></tr>
+					    	<tr><td><div id='c30'>&nbsp;</div></td><td><div id='c31'>&nbsp;</div></td><td><div id='c32'>&nbsp;</div></td><td><div id='c33'>&nbsp;</div></td><td><div id='c34'>&nbsp;</div></td><td><div id='c35'>&nbsp;</div></td></tr>
+					    	
+					    </table>
+				    </li>
+			    </ul>
+				
+				<input type="text" style='margin-top:0' id='label' name='label'/></div>
+				<button class='btn' id='addlabel'><?php echo $this->translate('Add')?></button>
+			</div>
+			<table id='labellist' class='table table-striped'>
+				<?php if(count($this->labellist)==1):?>
+					<?php foreach ($this->labellist as $label):?>
+					<tr><td><div class='labelcolor' data=<?php echo $label['labelid']?> style="background-color:rgb(<?php echo substr($label['color'], 0,3)?>,<?php echo substr($label['color'],3,3)?>,<?php echo substr($label['color'],6,3)?>)"></div>
+					</td><td class='span2'><?php echo $label['labelname']?></td>
+						<td ><a class='edit'><?php echo $this->translate('Edit')?></a></td>
+						<td ><a class='delete hide'><?php echo $this->translate('Del')?></a></td>
+						<td ><a class='archive hide'><?php echo $this->translate('Archive')?></a></td>
+						<td ><a class='merge hide'><?php echo $this->translate('Merge')?></a></td>
+					</tr>
+					<?php endforeach;?>
+				<?php else :?>
+				<?php foreach ($this->labellist as $label):?>
+				<tr><td><div class='labelcolor' data=<?php echo $label['labelid']?> style="background-color:rgb(<?php echo substr($label['color'], 0,3)?>,<?php echo substr($label['color'],3,3)?>,<?php echo substr($label['color'],6,3)?>)"></div></td><td class='span2'><?php echo $label['labelname']?></td>
+					<td><a class='edit'><?php echo $this->translate('Edit')?></a></td>
+					<td ><a class='delete'><?php echo $this->translate('Del')?></a></td>
+					<td ><a class='archive'><?php echo $this->translate('Archive')?></a></td>
+					<td><a class='merge'><?php echo $this->translate('Merge')?></a></td>
+				</tr>
+				<?php endforeach;?>
+				<?php endif;?>
+			</table>
+		</div>
+	</div>
+	<div class='modal-footer'></div>
+</div>
+<script>
+attachdel()
+attachedit()
+attacharchive()
+attachmerge()
+		function attacharchive()
+		{
+			$('.archive').click(function(){
+				var tr=$(this).parents('tr')
+				var text=$('td',tr).eq(1).text();	
+				var labelid=$('.labelcolor',tr).attr('data')
+				var dlg=new Dialog(text,'archive',labelid,"<?php echo $this->translate('Close')?>","<?php echo $this->translate('Archive')?>")
+				dlg.setcaller(this)
+				dlg.init();
+				dlg.show()
+			})
+		}	
+		function attachdel(){
+			$('.delete').on('click',function(){
+				var tr=$(this).parents('tr')
+				var labelid=$('.labelcolor',tr).attr('data')
+				$.get('/dailylog/label/isused',{'id':labelid},function(data){
+					if(data=='noused'){
+						deletelabel(tr,labelid)
+					}
+					else{
+						var dlg='<div class="modal"><div class="modal-body">这个类别已被使用,如果要删除此类，将会把属于此类的日志一起删除</div><div class="modal-footer"><button class="btn" data-dismiss="modal">关闭</button> <button class="btn btn-primary">删除</button></div></div>'
+						dlg=$(dlg)
+						$('.btn-primary',dlg).click(function(){
+							deletelabel(tr,labelid)
+							dlg.modal('hide')
+						})
+						dlg.modal()
+						
+					}
+				})
+
+			})
+		}
+		function attachedit()
+		{
+			$('.edit').click(function(){
+				var tr=$(this).parents('tr')
+				var text=$('td',tr).eq(1).text();
+				var labelid=$('.labelcolor',tr).attr('data');
+				var dlg=new Dialog(text,'save',labelid,"<?php echo $this->translate('Close')?>","<?php echo $this->translate('Edit')?>")
+				dlg.addcolorpicker('colorpicker')
+				dlg.setcaller(this)
+				dlg.init();
+				dlg.show()
+			})
+		}
+		
+		function attachmerge()
+		{
+			$('.merge').click(function(){
+				var tr=$(this).parents('tr')
+				var text=$('td',tr).eq(1).text();
+				var labelid=$('.labelcolor',tr).attr('data')
+				var dlg=new Dialog(text,'merge',labelid,"<?php echo $this->translate('Close')?>","<?php echo $this->translate('Merge')?>")
+				dlg.setcaller(this)
+				dlg.setLabelTable('labellist')
+				dlg.init();
+				dlg.show()
+			})
+		}
+ 	$('#addlabel').click(function(){
+                if($('.labelcolor').size()==1){
+                        $('.delete').show()
+                        $('.archive').show()
+                        $('.merge').show()
+                }
+                var label=$('#label').val()
+                if(label){
+                        var data={'name':label,'color':$('#label').css('background-color')}
+                        $.post('/dailylog/label/add',data,function(data){
+                                var div=$("<div class='labelcolor' data="+data.id+"></div>").css('background-color',$('#label').css('background-color'))
+                                var td1=$("<td></td>").append(div)
+                                var td2=$("<td>"+label+"</td>")
+                                var td3=$("<td><a class='edit'><?php echo $this->translate('Edit') ?></a></td>")
+                                var td4=$("<td><a class='delete'><?php echo $this->translate('Del')?></a></td>")
+                                var td5=$("<td><a class='archive'><?php echo $this->translate('Archive')?></a></td>")
+                                var td6=$("<td><a class='merge'><?php echo $this->translate('Merge')?></a></td>")
+                                var tr=$('<tr></tr>').append(td1).append(td2).append(td3).append(td4).append(td5).append(td6)
+                                $('#labellist').append(tr)
+                                $('.delete',tr).on('click',function(){
+                                        var labelid=$('.labelcolor',tr).attr('data')
+                                        $.post('/dailylog/label/del',{'id':labelid},function(data){
+                                                if(data.result=='success'){
+                                                        tr.remove();
+                                                        if($('.labelcolor').size()==1){
+                                                                $('.delete').hide()
+                                                                $('.archive').hide()
+                                                                $('.merge').hide()
+                                                        }
+                                                }
+                                        })
+                                })
+                                $('.edit',tr).on('click',function(){
+                                        var tr=$(this).parents('tr')
+                                        var text=$('td',tr).eq(1).text();
+                                        var labelid=$('.labelcolor',tr).attr('data')
+                                        var dlg=new Dialog(text,'save',labelid,'Close','Edit')
+                                        dlg.setcaller(this)
+                                        dlg.init()
+                                        dlg.addcolorpicker('colorpicker')
+                                        dlg.show()
+                                })
+                                $('.archive',tr).on('click',function(){
+                                        var tr=$(this).parents('tr')
+                                        var text=$('td',tr).eq(1).text();
+                                        var dlg=new Dialog(text,'存档')
+                                        dlg.addcolorpicker('colorpicker')
+                                        dlg.show()
+
+                                })
+                                $('.merge',tr).on('click',function(){
+                                        var tr=$(this).parents('tr')
+                                        var text=$('td',tr).eq(1).text();
+                                        var dlg=new Dialog(text,'合并')
+                                        dlg.addcolorpicker('colorpicker')
+                                        dlg.show()
+
+                                })
+                        })
+                }
+        })
+
+</script>

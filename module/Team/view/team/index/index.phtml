@@ -1,0 +1,7 @@
+<div class='fluid span12'>
+<div style='margin-top:20px;text-align:center'>
+<?php foreach ($this->teamlist as $team):?>
+	<a style='display:block' class='span3'  href='/dailylog/index/mylog?teamid=<?php echo $team->teamid?>'><img src='/img/p5.png'><div><?php echo $team->teamname?></div></a>
+<?php endforeach;?>
+</div>
+</div>

@@ -1,0 +1,101 @@
+ <div class='row-fluid'>
+ 	<?php echo $this->translate('Password Setting')?>
+ 	<?php if(isset($error)):?>
+	<div class='btn btn-warning'><strong><?php echo $error?></strong></div><br/>
+	<?php endif;?>
+	<div class="row-fluid">
+		<div id='msg' class='span2 btn btn-warning hide'></div>
+	</div>
+	<form action='/user/index/setuserinfo' method='post' class='valign'>
+		<div class="row-fluid">
+			<input type='text' class='span2' id='email' name='email' disabled value=<?php echo $this->email?>>
+		</div>
+		<div class="row-fluid">
+			<input type='text'  class='span2' id='name' name='name' placeholder=<?php echo $this->translate('Pls input your name')?>><label id='nameck'></label>
+		</div>
+		<div class='row-fluid'>
+			<input type='password'  class='span2' id='password' name='password' placeholder=<?php echo $this->translate('Password 6~20 characters')?>><label id='pw1'></label>
+		</div>
+		<div class='row-fluid'>
+			<input type='password'  class='span2' name='confirmpw' id='confirmpw' placeholder="<?php echo $this->translate('Confirm Password');?>"><label id='pw2'></label>
+		</div>
+		<div class='row-fluid'>
+		<input type='submit' id='submit' class='span2 btn btn-info  btn-default' value=<?php echo $this->translate('Setting')?>>
+		</div>
+	</form>
+</div>
+<div>
+	<ul class='unstyled' style='float:right;margin-top:-30%;margin-right:100px'>
+		<li><a style='color:#fff' href='/user/index/confirm?lang=en_US&key=<?php echo $this->invitekey?>&team=<?php echo $this->team?>'>English</a></li>
+		<li><a style='color:#fff' href='/user/index/confirm?lang=zh_CN&key=<?php echo $this->invitekey?>&team=<?php echo $this->team?>'>中文</a></li>
+		<li><a style='color:#fff' href='/user/index/confirm?lang=ja_JP&key=<?php echo $this->invitekey?>&team=<?php echo $this->team?>'>日本语</a></li>
+	</ul>
+
+</div>
+<script>
+$(function(){
+	$('#confirmpw').blur(function(){
+		pwcheck(this)
+	})
+	$('#password').blur(function(){
+		pwsizecheck(this)
+	})
+	$('#submit').submit(function(e){
+	
+		if(trim($('#name').val())==''){
+			$('#nameck').addClass('icon-remove')
+		}else{
+			$('#nameck').removeClass('icon-remove')
+		}
+		if($('#nameck').hasClass('icon-remove')||$('#pw1').hasClass('icon-remove')||$('#pw2').hasClass('icon-remove'))
+		{
+			$('#msg').append('The user name or password is not correct!');return false;
+		}
+		return true;
+	})
+	$('#name').blur(function(){
+		$(this).val(trim($(this).val()))
+		if($(this).val())
+			$('#nameck').addClass('icon-ok')
+	})
+})
+function trim(str)
+{
+	for(var i=0;i<str.length;i++)
+	{
+		if(str[i]!=' ')break;
+	}
+	str=str.substring(i,str.length)
+	for(var i=str.length-1;i>=0;i--){
+		if(str[i]!=' ')break;
+	}
+	str=str.substring(0,i+1)
+	return str;
+}
+function pwcheck(obj)
+{
+	var val=$(obj).val();
+	if(val.length<6 ||val.length>20){
+		$('#pw2').addClass('icon-remove');
+		return;	
+	}
+	else{
+		if($(obj).val()!=$('#password').val()){
+			$('#pw2').addClass('icon-remove');
+			$('#msg').empty().append("<?php echo $this->translate('The passwords input are not same')?>").show()
+			return;
+		}
+	}
+	$('#pw2').removeClass('icon-remove').addClass('icon-ok')
+	$('#msg').empty().hide()
+}
+function pwsizecheck(obj)
+{
+	var val=$(obj).val();
+		if(val.length<6 || val.length>20){
+		$('#pw1').addClass('icon-remove');
+		return;	
+	}
+	$('#pw1').removeClass('icon-remove').addClass('icon-ok')
+}
+</script>

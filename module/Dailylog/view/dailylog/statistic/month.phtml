@@ -1,0 +1,181 @@
+<div class='white-bg'>
+	<div class='modal-header'>
+		<?php echo $this->translate('Team Settings')?>
+	</div>
+	<div>
+		<ul class='nav nav-tabs'>
+			<li id='teamset'><a href='/team/index/setting'><?php echo $this->translate('Basi Setting')?></a></li>
+			<li id='membermanage'><a href='/team/index/member'><?php echo $this->translate('Member Manage')?></a></li>
+			<li id='catmanage'><a href='/dailylog/label/index'><?php echo $this->translate('Category Manage')?></a></li>
+			<li id='statistic' class='active'><a href='/dailylog/statistic/month'><?php echo $this->translate('Statistic')?></a></li>
+		</ul>
+		<input size="16" type="text" value="<?php echo $this->date?>" readonly class="form_datetime">
+ 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto">
+ 		</div>
+		
+	</div>
+	<div class='modal-footer'></div>
+	<?php $range=range(1, $this->numofdays);$categories=implode(',',$range);$hoursArrary=array();?>
+	<?php for($i=1;$i<=$this->numofdays;$i++):?>
+		<?php $hoursArrary[$i]=0;?>
+	<?php endfor;?>
+
+</div>
+<script type="text/javascript">
+<!--
+var month=0
+$(function(){
+	$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd','minView':2}).on('change', function(ev){
+		var date=$(this).val()
+		var dateArr=date.split('-')
+		
+		if(dateArr[1]!=month){
+			$.post('/dailylog/statistic/month',{'date':date,},function(data){
+				var chart=new Highcharts.Chart({
+					chart:{renderTo:'container',
+							type: 'line',
+		            		marginRight: 130,
+		            		marginBottom: 25},
+		            title: {
+		                    text: '每月日志时间统计',
+		                    x: -20 //center
+		            },
+		            subtitle: {
+		                    text: '来源: log.icniot.cn',
+		                    x: -20
+		             },
+		             xAxis: {
+		                categories: []
+		             },
+		             yAxis: {
+		                 title: {
+		                     text: '时间长度'
+		                 },
+		                 plotLines: [{
+		                     value: 0,
+		                     width: 1,
+		                     color: '#808080'
+		                 }]
+		             },
+		             tooltip: {
+		                 valueSuffix: 'Hour'
+		             },
+		             legend: {
+		                 layout: 'vertical',
+		                 align: 'right',
+		                 verticalAlign: 'top',
+		                 x: -10,
+		                 y: 100,
+		                 borderWidth: 0
+		             },
+		            	})
+				
+				var dataset=data.data
+				
+				
+				var userid=0, sumArr=[];
+				var sumArr=[]
+				for(var j=1;j<=data.numofdays;j++)
+				{ 
+					sumArr.push([j,0])
+				}
+				if(dataset.length==0){
+					options={name:'No data',data:sumArr}
+					chart.addSeries(options)
+					return;
+				}
+				var i=0
+				for(i in dataset){ 
+					if(dataset[i]['userid']!=userid){
+						if(userid!=0)
+						{
+							
+							options={name:dataset[i-1]['name'],data:sumArr}
+							chart.addSeries(options);
+							sumArr=[]
+							for(var j=1;j<=data.numofdays;j++)
+							{ 
+								sumArr.push([j,0])
+							}
+							
+						}
+						userid=dataset[i]['userid'];	
+					}
+					sumArr[dataset[i]['date']-1][1]=dataset[i]['sum']-0
+				}
+				
+				options={name:dataset[i-1]['name'],data:sumArr}
+				chart.addSeries(options);
+			})
+			month=dateArr[1]
+			
+		}
+	})
+	var date=$(".form_datetime").val().split('-')
+	month=date[1]
+    $('#container').highcharts({
+        chart: {
+            type: 'line',
+            marginRight: 130,
+            marginBottom: 25
+        },
+        title: {
+            text: '每月日志时间统计',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '来源: log.icniot.cn',
+            x: -20
+        },
+        xAxis: {
+            categories: [<?php print_r($categories	)?>]
+        },
+        yAxis: {
+            title: {
+                text: '时间长度'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'Hour'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -10,
+            y: 100,
+            borderWidth: 0
+        },
+        series: [
+            <?php $userid=0;?>
+        	<?php while ($item=$this->data->current()):?>
+        		<?php if($userid<>$item->userid):?>
+        			<?php if($userid<>0):?>
+        			<?php echo implode(',', $hoursArrary), ']},'?>
+        			<?php for($i=1;$i<=$this->numofdays;$i++):?>
+        				<?php $hoursArrary[$i]=0;?>
+        			<?php endfor;?>
+        			<?php endif;?>
+        		<?php $userid=$item->userid;?>
+        	{name:'<?php echo  $item->name?>',
+        		
+        	data:[
+        		<?php endif;?>
+        		<?php  $hoursArrary[$item->date-0]=$item->sum?>
+           <?php endwhile;?>
+           <?php if($this->data->count()>0):?>
+           <?php echo implode(',', $hoursArrary), ']}'?>
+           <?php endif;?>
+        ]      
+    });
+});
+
+//-->
+</script>
+<script src='/js/js/highcharts.js'></script>
+<script src='/js/timepicker/bootstrap-datetimepicker.min.js'></script>

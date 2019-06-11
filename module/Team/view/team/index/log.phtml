@@ -1,0 +1,26 @@
+<div class='white-bg container'>
+	<div class='date modal-header'>
+		<a title='<?php echo $this->translate('Previous date')?> ' style='font-size:25px' href='/team/index/log?date=<?php echo $this->predate?>'>‹</a><?php echo $this->date?><a style='font-size:25px' title='<?php echo $this->translate('Next date')?>' href='/team/index/log?date=<?php echo $this->nextdate?>'>›</a>
+	</div>
+	<div style='min-height:500px'>
+	<?php if($this->loglist->count()):?>
+		<?php $id=0?>
+		<?php while($log=$loglist->current()):?>
+			<?php if($id!=$log['userid']):?>
+				<div class='span12'></div>
+			<?php $id=$log['userid']?>
+				<div class='span12'><img class='span1' src=<?php echo ($log['portrait'])?$log['portrait']:'/img/default.jpg'?>><a  class='span1'><?php echo $log['name']?></a></div>
+			<?php endif;?>
+				<div class='span10' style='position:relative'><div class='span2 offset1  progress' ><div class='bar' style="width: <?php echo $log['fromtime']*4?>%;"> </div><div class='bar bar-warning' style="width: <?php echo ($log['totime']-$log['fromtime'])*4?>%;"></div><div class='offset1' style='position:absolute;left:50px'><?php echo $log['fromtime'],'-',$log['totime']?></div></div><div class='span6 leftalign'><?php echo nl2br($log['content'])?></div>
+			</div>
+		<?php endwhile;?>
+		<?php else :?>
+		<div><?php echo $this->translate('No recode')?></div>
+		<ul class='unstyled inline'>	
+		<?php foreach($this->memberlist as $member):?>
+		<li class='div1 btn' style='padding-top:0'><a href='javascript:void(0)'><img src='<?php echo ($member['portrait'])?$member['portrait']:"/img/default.jpg"?>' style='width:50px;height:50px;padding-top:5px'><br><?php echo $member['name']?></a></li>
+		<?php endforeach;?>
+		</ul>
+	<?php endif;?>
+	</div>
+</div>

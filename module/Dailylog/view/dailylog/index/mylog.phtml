@@ -1,0 +1,100 @@
+<div class='white-bg'  style='text-align:center'>
+<table class='modal-custom table table-bordered' id='mylog'>
+	<thead>
+		<tr>
+			<td colspan=8 class='weeknav'>
+				<p class='account'><?php echo $this->translate('Welcome '),':',$this->username?></p>
+				<span><a style='font-size:40px' id='preweek' hidefocus title='<?php echo "Previous week"?>' href='/dailylog/index/preweek?<?php echo $this->week[0]?>'>‹</a></span>
+				<span><input  size="16" type="text" style='cursor:pointer' value="<?php echo $this->date?>" readonly id="datepicker"></span>
+				<span><a  style='font-size:40px' id='nextweek' title='<?php echo "Next week"?>'  href='/dailylog/index/nextweek?<?php echo $this->week[8]?>'>›</a></span>
+				<span class='today'><?php echo $this->translate('Today:'),$this->date?></span>
+			</td>
+		</tr>
+		<tr>
+			<th class='span1' unselectable='on'><?php echo $this->translate('TimeSpan')?></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[1]?></div><div unselectable='on'><?php echo $this->translate('Mon')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[2]?></div><div unselectable='on'><?php echo $this->translate('Tues')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[3]?></div><div unselectable='on'><?php echo $this->translate('Wednes')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[4]?></div><div unselectable='on'><?php echo $this->translate('Thurs')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[5]?></div><div unselectable='on'><?php echo $this->translate('Fri')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[6]?></div><div unselectable='on'><?php echo $this->translate('Satur')?></div></th>
+			<th class='span2'><div unselectable='on' class='date'><?php echo $this->week[7]?></div><div unselectable='on'><?php echo $this->translate('Sun')?></div></th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php for($i=0;$i<24;$i++):?>
+		<tr><td unselectable='on' rowspan="2" class='timecol'><?php echo $i?><?php echo ($i<=12)?'AM':'PM'?></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<?php endfor;?>
+	</tbody>
+</table>
+</div>
+<div id='minibox' class='hide white-bg span3'>
+	<div class='arrow'>&nbsp;</div>
+	<textarea rows="10"  style='margin-top:15px;resize:none' onselectstart='return true' style='margin-top:10px' placeholder='<?php echo $this->translate('请输入内容')?>'></textarea>
+	<button id='boxsave' class='btn' disabled="disabled"><?php echo $this->translate('Save')?></button>
+	<button id='boxcancel' class='btn '><?php echo $this->translate('Cancel')?></button>
+	<button id='boxdelete' class='btn '><?php echo $this->translate('Delete')?></button>	
+	<select id='labelsel'>
+	<?php foreach ($labellist as $label):?>
+		<?php $rgb=substr($label['color'],0,3).','.substr($label['color'], 3,3).','.substr($label['color'], 6,3)?>
+		<?php $reversergb=(255-substr($label['color'],0,3)).','.(255-substr($label['color'], 3,3)).','.(255-substr($label['color'], 6,3))?>
+		<option color='<?php echo $rgb?>' data=<?php echo $label['labelid']?> style="background-color:rgb(<?php echo $rgb ?>);color:rgb(<?php echo $reversergb?>)"><?php echo $label['labelname']?></option>
+	<?php endforeach;?>
+	</select>
+</div>
+	<script type="text/javascript">
+		$(function(){
+			<?php foreach ($labellist as $label):?>
+				labelTable[<?php echo $label['labelid']?>]='<?php echo $label['color']?>';
+			<?php endforeach;?>
+			var sel=$('#labelsel option:first-child')
+			var color=sel.attr('color')
+			
+			$('#labelsel').css('background-color','rgb'+'('+color+')').css('color',r_color(color));
+			$('#labelsel').attr('data',sel.attr('data'))
+			$('#labelsel').change(function(){
+				var val=$(this).val()
+				var label;
+				var bg
+				$('#labelsel option').each(function(){
+					if($(this).val()==val){
+						bg=$(this).attr('color');
+						
+						label=$(this).attr('data')
+						return;
+					}
+				})
+				if($('#minibox textarea').val()!='')$('#boxsave').removeAttr('disabled')
+				$(this).css('background-color','rgb'+'('+bg+')').css('color',r_color(bg)).blur()
+				currentlog.label=label;
+				$(this).attr('data',label)
+				currentlog.fresh()
+			})
+		})
+	</script>
+<script type="text/javascript">
+<!--
+$(function(){
+	$('#datepicker').datetimepicker({format: 'yyyy-mm-dd','minView':2}).on('changeDate',function(ev){
+		var date=new Date(ev.date.valueOf());
+			date=date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
+		var preweekdate=$('#preweek').attr('href').split('?');
+			preweekdate=new Date(preweekdate[1])
+		var nextweekdate=$('#nextweek').attr('href').split('?');
+			nextweekdate=new Date(nextweekdate[1])
+			if(preweekdate>=ev.date.valueOf())
+			{
+				$('#preweek').trigger('click')
+			}
+			else{
+				if(nextweekdate<=ev.date.valueOf()){
+					$('#nextweek').trigger('click');
+				}
+			}
+	})
+	
+})
+//-->
+</script>
+<script src='/js/timepicker/bootstrap-datetimepicker.min.js'></script>

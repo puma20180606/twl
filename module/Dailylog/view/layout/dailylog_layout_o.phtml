@@ -1,0 +1,98 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Worklog')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+          <!-- Scripts -->    
+       
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js')
+                                      ->appendFile($this->basePath().'/js/worklog.js')
+                                      ->appendFile($this->basePath().'/js/jquery.form.js')
+                                      ->appendFile($this->basePath().'/js/blr.js')?>
+         <script src="/js/jquery-ui.js"></script>
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/twl.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') 
+                        ->appendStylesheet($this->basePath().'/css/style.css')?>
+		<link rel="stylesheet" href="/css/jquery-ui.css" />
+         <style type="text/css">
+         	 <--!  .page_bg{background-image:url(/img/bg.jpg);background-position:center;}
+-->
+         	.page_bg{background-color:#efefef}
+         </style>
+    </head>
+    <body class='page_bg' onselectstart="return false">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                      <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Worklog') ?></a></li>
+                            <li>
+                            	<div class='btn-group'>
+			                    	<button class='btn btn-success span2' id='currentteam' style='height:60px' >
+   				                    	<?php $this->ismanager=false;?>
+			                    		<?php foreach ($this->teamlist as $team):?>
+			                    			<?php if($team['teamid']==$this->currentteamid):?>
+			                    				<img src='<?php echo ($team['logo'])?$team['logo']:'/img/teamlogo.jpg'?>' style='width:50px;max-height:50px'>
+												<?php echo $team['teamname']?>
+												<?php if($team['managedby']==$this->userid):?>
+													<?php $this->ismanager=true?>
+												<?php endif;?>
+			                    			<?php break;endif;?>
+                        				<?php endforeach;?>
+                        			</button>
+			                    	<?php if(count($this->teamlist)>1):?>
+			                    		<button class="btn dropdown-toggle btn-success" data-toggle="dropdown" style='height:60px;'>  <span class="caret"></span></button>
+				                    	<ul class='dropdown-menu'>         
+					                    	<?php foreach ($this->teamlist as $team):?>      
+					                    	 	<?php if($team['teamid']<>$this->currentteamid):?>
+					                    		<li><a href='/dailylog/index/mylog?teamid=<?php echo $team['teamid']?>'><?php echo $team['teamname']?></a></li>
+
+					                    		<?php endif;?>
+					                    	<?php endforeach;?>
+				                    	</ul>
+			                    	<?php endif;?>
+		                    	</div>
+                            </li>
+                           	
+                        </ul>
+                        <ul class="nav nav-pills"  style='text-align:center;sbackground-color:#4391c1;margin:0 0 0 300px' id='navbar'>
+							<li <?php if($this->nav==1):?>class="active"<?php endif;?>><a  style='width:60px;font-size:12px;padding:42px 0 0 0;background:url(/img/mylog.png) no-repeat' href="/dailylog/index/mylog" >
+									<?php echo $this->translate('Mylog')?></a></li>
+							<li <?php if($this->nav==2):?>class="active"<?php endif;?>><a style='width:60px;font-size:12px;padding:42px 0 0 0;background:url(/img/team.png) no-repeat' href="/team/index/log" id='teamlog' >
+								<?php echo $this->translate('Teamlog')?>
+								</a></li>
+							<li <?php if($this->nav==3):?>class="active"<?php endif;?>><a style='width:60px;font-size:12px;padding:42px 0 0 0;background:url(/img/set.png) no-repeat' href="/user/index/setting" id='setting' >
+								<?php echo $this->translate('Setting')?>
+								</a>
+							</li>
+							<?php if($this->ismanager):?>
+							<li  <?php if($this->nav==4):?>class="active"<?php endif;?>><a style='width:60px;font-size:12px;padding:42px 0 0 0;background:url(/img/teamset.png) no-repeat' href="/team/index/setting" id='teamsetting' >
+								<?php echo $this->translate('Team Settings')?>
+								</a>
+							</li>
+							<?php endif;?>
+							<li><a style='width:60px;font-size:12px;padding:42px 0 0 0;background:url(/img/logout.png) no-repeat' href="/user/index/logout" id='logout'><?php echo $this->translate('Logout')?></a></li>
+						</ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container" style='width:960px;text-align:center;'>
+        	<div style='height:120px;background-color:#663300;'>
+          		<img src="/img/pen.gif"  style='width:100px;margin:10px 0 0 350px'>
+			</div>
+			<?php echo $this->content; ?>
+ 	        <footer class='span8'>
+ 	        	<br><br>
+                <p>&copy; 2005 - <?php echo date('Y') ?> by  神州物联网商务股份有限公司&nbsp;<?php echo $this->translate('All rights reserved.') ?></p>
+            </footer>
+        <?php echo $this->inlineScript() ?>
+         </div> <!-- /container -->
+    </body>
+</html>

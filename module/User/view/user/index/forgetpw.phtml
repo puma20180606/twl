@@ -1,0 +1,16 @@
+<div class="row-fluid white-bg">
+	<div class='modal-header text-left'><?php echo $this->translate('Reset password')?></div>
+	<div class='modal-body'>
+	<?php if(isset($this->error)):?>  
+		
+	<?php  print_r($this->error[0]); endif; ?>
+	<form action="/user/index/forgetpwmail" method='post'>
+		<div class="row-fluid">
+			<input type='text' id='email' name='email' placeholder=<?php echo $this->translate('Email')?>>
+		</div>
+		<div class="row-fluid">
+			<input type='submit' id='forgetpw' class='btn btn-primary' value='<?php echo $this->translate('Get password')?>'>
+		</div>
+	</form>
+	</div>
+</div>

@@ -1,0 +1,129 @@
+# Chinese translations for PACKAGE package.
+# Copyright (C) 2013 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Administrator <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-31 19:57+0800\n"
+"PO-Revision-Date: 2013-07-31 20:31+0800\n"
+"Last-Translator: Administrator <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=GBK\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: po/index.phtml:3 po/login.phtml:4
+msgid "Register"
+msgstr ""
+
+#: po/index.phtml:9 po/register.phtml:9
+msgid "Email"
+msgstr ""
+
+#: po/index.phtml:12 po/login.phtml:17 po/register.phtml:15
+#: po/setting.phtml:78
+msgid "Password"
+msgstr ""
+
+#: po/index.phtml:15 po/login.phtml:20
+msgid "Login"
+msgstr ""
+
+#: po/login.phtml:14
+msgid "Home"
+msgstr ""
+
+#: po/register.phtml:12
+msgid "Team Name"
+msgstr ""
+
+#: po/register.phtml:18
+msgid "Username"
+msgstr ""
+
+#: po/register.phtml:21
+msgid "Register Team"
+msgstr ""
+
+#: po/setting.phtml:3
+msgid "Basic Setting"
+msgstr ""
+
+#: po/setting.phtml:4
+msgid "Email Setting"
+msgstr ""
+
+#: po/setting.phtml:5
+msgid "Password Setting"
+msgstr ""
+
+#: po/setting.phtml:19
+msgid "Portrait"
+msgstr ""
+
+#: po/setting.phtml:23
+msgid "Click To Change"
+msgstr ""
+
+#: po/setting.phtml:28
+msgid "NickName"
+msgstr ""
+
+#: po/setting.phtml:30
+msgid "Pls input nickname"
+msgstr ""
+
+#: po/setting.phtml:34
+msgid "Mobiel Phone"
+msgstr ""
+
+#: po/setting.phtml:36
+msgid "Pls input your phone number"
+msgstr ""
+
+#: po/setting.phtml:40 po/setting.phtml:67 po/setting.phtml:92
+msgid "Save"
+msgstr ""
+
+#: po/setting.phtml:52
+msgid "Current Email"
+msgstr ""
+
+#: po/setting.phtml:56 po/setting.phtml:58
+msgid "New Email"
+msgstr ""
+
+#: po/setting.phtml:61
+msgid "Confirm New Email"
+msgstr ""
+
+#: po/setting.phtml:63
+msgid "Confirm Email"
+msgstr ""
+
+#: po/setting.phtml:82
+msgid "NewPassword"
+msgstr ""
+
+#: po/setting.phtml:84
+msgid "New Password"
+msgstr ""
+
+#: po/setting.phtml:86
+msgid "Confirm New Password"
+msgstr ""
+
+#: po/setting.phtml:88
+msgid "Confirm Password"
+msgstr ""
+
+#: po/userinfo.phtml:4
+msgid "Modify Password"
+msgstr ""
+
+#: po/userinfo.phtml:5
+msgid "Theme Setting"
+msgstr ""

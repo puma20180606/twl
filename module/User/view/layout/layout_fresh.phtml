@@ -1,0 +1,36 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="115; url=/" />
+        <?php echo $this->headTitle('Worklog')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') 
+                        ->appendStylesheet($this->basePath().'/css/style.css')?>
+        <!-- Scripts -->
+      
+         <style type="text/css">
+			.page_bg{background-color:#ccc}
+			
+         </style>
+		
+    </head>
+    <body class='page_bg'>
+	<div style='position:fixed;z-index:9000;top:0;height:80px;width:100%;background-color:#33b4dc;'>
+                <a href='/'><img  src="/img/p3.png" style='height:60px;padding-top:10px;left:40%;position:relative;margin-left:-400px;float:left'></a>
+        </div>
+        <div class='container'>
+	      	<?php echo $this->content?>
+       	</div>
+         <footer style='margin-top:200px'>
+             <hr>
+             <p>&copy; 2005 - <?php echo date('Y') ?> by  神州物联网商务股份有限公司&nbsp;. <?php echo $this->translate('All rights reserved.') ?></p>
+          </footer>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

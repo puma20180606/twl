@@ -1,0 +1,107 @@
+<br>
+<div class='white-bg'>
+<ul class="nav nav-tabs" id='setting'>
+  <li class='active' ><a href="/user/index/basicset"><?php echo $this->translate('Basic Setting')?></a></li>
+  <li id='emailset'><a href="/user/index/setemail"><?php echo $this->translate('Email Setting')?></a></li>
+   <li><a href="/user/index/setpasswd"><?php echo $this->translate('Password Setting')?></a></li>
+</ul>
+
+<div  id='setblock' style='min-height:500px'>
+<form id='kkk' style='visibility:hidden'>
+<input id='portrait' name='portrait' style='height:0px;width:0px;position:relative;z-index:-100' type='file'/>
+</form>
+<div id='set1'>
+	<div class='modal-header'>
+		<?php echo $this->username?>
+	</div>
+	<div class='modal-body'>
+		<form  class="form-horizontal span4 offset2">
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('Portrait')?></label>
+					<div class='controls' style='position:relative'>
+						<img src=<?php if($this->profile['portrait']):echo '"'.$this->profile['portrait'].'"'?><?php else:?>'/img/default.jpg'<?php endif;?> id='portraitimg' style='width:60px;'>
+						<a href='javascript:void(0)' class='btn' style='margin-top:0' id='uploadphoto' hidefocus><?php echo $this->translate('Click To Change')?></a>
+						<input type='text' id='imagefile' name='portrait' class='hide'>	
+					</div>
+			</div>
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('NickName')?></label>
+				<div class='controls'>
+					<input type='text' style='margin-top:0'  name='nickname' id='nickname' value="<?php echo $this->username?>" placeholder="<?php echo $this->translate('Pls input nickname')?>">
+				</div>
+			</div>
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('Mobiel Phone')?></label>
+				<div class='controls'>
+					<input type='text' style='margin-top:0' name='phone' id='phone' value='<?php echo $this->profile['phone']?>' placeholder="<?php echo $this->translate('Pls input your phone number')?>">
+				</div>
+			</div>
+			<div class='result'></div><hr>
+			<input type='submit' id='profilesave' class='btn' value="<?php echo $this->translate('Save')?>">
+		</form>
+	</div>
+</div>
+<div id='set2' class='hide'>
+	<div class='modal-header'>
+		<?php echo $this->username?>
+	</div>
+	<div class='modal-body'>
+		<form class="form-horizontal offset2 span4">
+			<div class='control-group'>
+				<label  class='control-label'><?php echo $this->translate('Current Email')?></label>
+				<div class='controls'>
+					<input  type='text' style='margin-top:0'  id='email' name='email' value="<?php echo $this->email;?>" readonly>
+				</div>
+			</div>
+			<div class='control-group'>
+				<label  class='control-label'><?php echo $this->translate('New Email')?></label>
+				<div class='controls'>
+					<input type='text' style='margin-top:0' id='newemail' name='newemail' placeholder="<?php echo $this->translate('New Email');?>">
+					<label id='reason'></label>
+				</div>
+			</div>
+			<div class='control-group'>
+				<label  class='control-label'><?php echo $this->translate('Confirm New Email')?></label>
+				<div class='controls'>
+					<input type='text' style='margin-top:0' id='confirmemail' name='confirmemail' placeholder="<?php echo $this->translate('Confirm Email');?>">
+				</div>
+			</div>
+			</div>
+			<div class='result'></div>
+			<hr>
+			<input type='submit' id='changeemail' class='btn' value="<?php echo $this->translate('Save')?>">
+		</form>
+</div>
+<div  id='set3' class='hide'>
+	<div class='modal-header'>
+		<?php echo $this->username?>
+	</div>
+	<div class='modal-body'>
+		<form action="" class="form-horizontal offset2 span4">
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('Current Password')?></label>
+				<div class='controls'>
+					<input name='password' style='margin-top:0' id='password' type='password'>
+				</div>
+			</div>
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('New Password')?></label>
+				<div class='controls'>
+					<input type='password' name='newpassword' style='margin-top:0' id='newpassword' placeholder="<?php echo $this->translate('New Password');?>">
+				</div>
+			</div>
+			<div class='control-group'>
+				<label class='control-label'><?php echo $this->translate('Confirm New Password')?></label>
+				<div class='controls'>
+					<input type='password' name='confirmpw' id='confirmpw' style='margin-top:0'  placeholder="<?php echo $this->translate('Confirm Password');?>">
+				</div>
+			</div>
+			</div>
+			<div class='result'></div>
+			<hr>
+			<input type='submit' id='changepw' class='btn' value="<?php echo $this->translate('Save')?>">
+		</form>
+	</div>
+</div>
+</div>
+</div>

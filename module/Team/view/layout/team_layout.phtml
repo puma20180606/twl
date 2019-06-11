@@ -1,0 +1,44 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content-type='width=device-width,use-scalable=yes,initial-scale=1.0' >
+        <meta name="viewport" content="target-densitydpi=device-dpi" />
+
+        <?php echo $this->headTitle('Worklog')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/twl.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') 
+                        ->appendStylesheet($this->basePath().'/css/style.css')?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+                                      
+         <style type="text/css">
+         	.page_bg{background:url(/img/bgimg/bg3.jpg)}
+         	.page_bg{background:#ebebeb}
+		body a{text-decoration:none}
+         </style>
+		
+    </head>
+    <body class='page_bg'>
+        <div style='position:fixed;z-index:9000;top:0;height:80px;width:100%;background-color:#33b4dc;'>
+    		<img  src="/img/p3.png" style='height:60px;padding-top:10px;left:40%;position:relative;margin-left:-400px;float:left'>
+    	</div>
+	<br>
+	<div class="container">
+            	<?php echo $this->content; ?>
+          	<footer style="margin-top:65%;">
+             <hr>
+                <div style='margin-left:40%'>&copy; 2005 - <?php echo date('Y') ?> 神州物联网商务股份有限公司&nbsp; <?php echo $this->translate('All rights reserved.') ?></div>
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

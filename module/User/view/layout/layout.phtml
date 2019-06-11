@@ -1,0 +1,44 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	<meta name='viewport' content-type='width=device-width,use-scalable=yes,initial-scale=1.0' >
+<meta name="viewport" content="target-densitydpi=device-dpi" />
+        <?php echo $this->headTitle('Worklog')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/twl.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') 
+                        ->appendStylesheet($this->basePath().'/css/style.css')?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+                                      
+         <style type="text/css">
+         	.page_bg{background-color:#4391c1;height:240px}
+         	.banner{background:url(/img/p1.jpg) no-repeat}
+				
+         	.page_bg{background-color:#33b4dc;height:240px}
+         </style>
+		
+    </head>
+    <body style='width:100%;margin:0;padding:0;height:800px;position:relative;'>
+        <div style='text-align:center;'>
+        
+	    <div class='page_bg' style='padding:0;padding-top:50px;width:100%'><img src='/img/p3.png'></div><div style='margin-left:-200px'><img src='/img/p4.png'></div>
+	    <div class='row'><img src='/img/p1.jpg'></div>
+            <?php echo $this->content; ?>
+		<footer >
+	     	<hr>
+	        <p>&copy; 2005 - <?php echo date('Y') ?> by 神州物联网商务股份有限公司&nbsp;<?php echo $this->translate('All rights reserved.') ?></p>
+	     </footer>
+	</div>        
+<?php echo $this->inlineScript() ?>
+    </body>
+</html>

@@ -1,0 +1,598 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-09 18:26+0800\n"
+"PO-Revision-Date: 2013-08-09 18:31+0800\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:1
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:1
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:1
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:10
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:10
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:10
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:13
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:13
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:13
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:13
+msgid "The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:16
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:16
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:16
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:19
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:19
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:19
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:22
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:22
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:22
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:34
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:34
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:34
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:41
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:41
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:41
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:53
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:8
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:53
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:8
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:53
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:8
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:53
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:56
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:80
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:11
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:35
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:56
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:80
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:11
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:35
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:56
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:80
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:11
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:35
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:56
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:80
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:11
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:35
+msgid "File"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:60
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:84
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:15
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:39
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:60
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:84
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:15
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:39
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:60
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:84
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:15
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:39
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:60
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:84
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:15
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:39
+msgid "Message"
+msgstr "谢谢"
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:64
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:88
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:19
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:43
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:64
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:88
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:19
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:43
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:64
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:88
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:19
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:43
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:64
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:88
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:19
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:74
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:29
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:74
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:29
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:74
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:29
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:74
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\404.phtml:103
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:58
+#: E:\PHP\project\twl\module\Application\view\error\404.phtml:103
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:58
+#: E:\PHP\project\twl\module\Dailylog\view\error\404.phtml:103
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:58
+#: E:\PHP\project\twl\module\User\view\error\404.phtml:103
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Admin\view\error\index.phtml:1
+#: E:\PHP\project\twl\module\Application\view\error\index.phtml:1
+#: E:\PHP\project\twl\module\Dailylog\view\error\index.phtml:1
+#: E:\PHP\project\twl\module\User\view\error\index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\layout\layout.phtml:31
+msgid "Micblr"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\layout\layout.phtml:34
+#: E:\PHP\project\twl\module\Team\view\layout\team_layout.phtml:38
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:37
+msgid "Home"
+msgstr "首页"
+
+#: E:\PHP\project\twl\module\Application\view\layout\layout.phtml:44
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:90
+#: E:\PHP\project\twl\module\Team\view\layout\team_layout.phtml:49
+#: E:\PHP\project\twl\module\User\view\layout\layout.phtml:35
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:56
+msgid "All rights reserved."
+msgstr "版权所有"
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:2
+#, php-format
+msgid "Welcome to %sZend Framework 2%s"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:3
+#, php-format
+msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:4
+msgid "Fork Zend Framework 2 on GitHub"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:9
+msgid "Follow Development"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:10
+#, php-format
+msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:11
+msgid "ZF2 Development Portal"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:15
+msgid "Discover Modules"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:16
+#, php-format
+msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:17
+msgid "Explore ZF2 Modules"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:21
+msgid "Help &amp; Support"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:22
+#, php-format
+msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
+msgstr ""
+
+#: E:\PHP\project\twl\module\Application\view\application\index\index.phtml:23
+msgid "Ping us on IRC"
+msgstr ""
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:6
+msgid "Welcome "
+msgstr "欢迎"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:11
+msgid "Today:"
+msgstr "今天"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:15
+msgid "TimeSpan"
+msgstr "时间"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:16
+msgid "Mon"
+msgstr "星期一"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:17
+msgid "Tues"
+msgstr "星期二"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:18
+msgid "Wednes"
+msgstr "星期三"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:19
+msgid "Thurs"
+msgstr "星期四"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:20
+msgid "Fri"
+msgstr "星期五"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:21
+msgid "Satur"
+msgstr "星期六"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:22
+msgid "Sun"
+msgstr "星期日"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:36
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:25
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:40
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:67
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:92
+msgid "Save"
+msgstr "保存"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:37
+msgid "Cancel"
+msgstr "取消"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\index\mylog.phtml:38
+msgid "Delete"
+msgstr "删除"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:3
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:3
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:64
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:3
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:3
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:3
+msgid "Team Settings"
+msgstr "团队设置"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:7
+msgid "Basi Setting"
+msgstr "基本设置"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:8
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:8
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:8
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:8
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:8
+msgid "Member Manage"
+msgstr "成员管理"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:9
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:9
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:9
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:9
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:9
+msgid "Category Manage"
+msgstr "类别管理"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\statistic\month.phtml:10
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:10
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:10
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:10
+msgid "Statistic"
+msgstr "统计"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:7
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:7
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:7
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:7
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:3
+msgid "Basic Setting"
+msgstr "基本设置"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:33
+#: E:\PHP\project\twl\module\Team\view\team\index\label.phtml:30
+msgid "Add"
+msgstr "添加"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:40
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:49
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:106
+msgid "Edit"
+msgstr "编辑"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:41
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:50
+msgid "Del"
+msgstr "删除"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:42
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:51
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:72
+msgid "Archive"
+msgstr "归档"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:43
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:52
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:120
+msgid "Merge"
+msgstr "合并"
+
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:72
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:106
+#: E:\PHP\project\twl\module\Dailylog\view\dailylog\label\index.phtml:120
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+msgid "Close"
+msgstr "关闭"
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:32
+msgid "Worklog"
+msgstr "工作日志"
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:60
+msgid "Mylog"
+msgstr "我的日志"
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:61
+msgid "Teamlog"
+msgstr "团队日志"
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:62
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:23
+#: E:\PHP\project\twl\module\User\view\user\index\resetpw.phtml:21
+msgid "Setting"
+msgstr "设置"
+
+#: E:\PHP\project\twl\module\Dailylog\view\layout\dailylog_layout.phtml:66
+msgid "Logout"
+msgstr "退出"
+
+#: E:\PHP\project\twl\module\Team\view\layout\team_layout.phtml:35
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:34
+msgid "TeamLog"
+msgstr "团队日志"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\log.phtml:18
+msgid "No recode"
+msgstr "没有日志"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:14
+msgid "Invite"
+msgstr "邀请"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:31
+msgid "The management is handover to"
+msgstr "管理交给"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:41
+msgid "Handover"
+msgstr "确定移交"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+msgid "Reciept Email Address"
+msgstr "收件人邮箱"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\member.phtml:49
+msgid "Send"
+msgstr "发送"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:15
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:11
+msgid "Team Name"
+msgstr "团队名称"
+
+#: E:\PHP\project\twl\module\Team\view\team\index\setting.phtml:22
+msgid "Change Team Logo"
+msgstr "改变团队LOGO"
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:2
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:5
+#: E:\PHP\project\twl\module\User\view\user\index\resetpw.phtml:2
+msgid "Password Setting"
+msgstr "密码设置"
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:14
+msgid "Pls input your name"
+msgstr "请输入名称"
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:17
+#: E:\PHP\project\twl\module\User\view\user\index\resetpw.phtml:14
+msgid "Password 6~20 characters"
+msgstr "输入6~20位字符数字"
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:20
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:88
+#: E:\PHP\project\twl\module\User\view\user\index\resetpw.phtml:17
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\confirm.phtml:85
+msgid "The passwords input are not same"
+msgstr "输入的密码不同"
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:14
+#: E:\PHP\project\twl\module\User\view\user\index\forgetpw.phtml:6
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:11
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:8
+msgid "Email"
+msgstr "邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:17
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:14
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:14
+msgid "Password"
+msgstr "密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:20
+#: E:\PHP\project\twl\module\User\view\user\index\index.phtml:18
+msgid "Login"
+msgstr "登陆"
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:23
+msgid "Forget password"
+msgstr "忘记密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\login.phtml:24
+msgid "Register"
+msgstr "注册"
+
+#: E:\PHP\project\twl\module\User\view\user\index\forgetpwmail.phtml:2
+msgid "The verification key has been sent to your mail "
+msgstr "验证码已发送到您的邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\forgetpw.phtml:2
+msgid "Reset password"
+msgstr "重置密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\forgetpw.phtml:9
+msgid "Get password"
+msgstr "获取密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:47
+msgid "Activate Successfully"
+msgstr "激活账号成功"
+
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:50
+msgid "Have Activate ever"
+msgstr "已经激活"
+
+#: E:\PHP\project\twl\module\User\view\user\index\verify.phtml:52
+msgid "5 Seconds later, you will go to login page"
+msgstr "5秒钟后页面自动跳到登陆界面"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:4
+msgid "Email Setting"
+msgstr "邮箱设置"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:19
+msgid "Portrait"
+msgstr "头像"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:23
+msgid "Click To Change"
+msgstr "改变"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:28
+msgid "NickName"
+msgstr "昵称"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:30
+msgid "Pls input nickname"
+msgstr "请输入昵称"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:34
+msgid "Mobiel Phone"
+msgstr "手机号码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:36
+msgid "Pls input your phone number"
+msgstr "请输入您的手机号码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:52
+msgid "Current Email"
+msgstr "当前邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:56
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:58
+msgid "New Email"
+msgstr "新邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:61
+msgid "Confirm New Email"
+msgstr "新邮箱确认"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:63
+msgid "Confirm Email"
+msgstr "确认邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:78
+msgid "Current Password"
+msgstr "当前密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:82
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:84
+msgid "New Password"
+msgstr "新密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\setting.phtml:86
+msgid "Confirm New Password"
+msgstr "确认新密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\registercomplete.phtml:2
+msgid "The verification is sent to your email "
+msgstr "验证码已发送到您的邮箱"
+
+#: E:\PHP\project\twl\module\User\view\user\index\registercomplete.phtml:3
+msgid "Go to Home page"
+msgstr "回到首页"
+
+#: E:\PHP\project\twl\module\User\view\user\index\userinfo.phtml:4
+msgid "Modify Password"
+msgstr "修改密码"
+
+#: E:\PHP\project\twl\module\User\view\user\index\userinfo.phtml:5
+msgid "Theme Setting"
+msgstr "主题设置"
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:4
+msgid "Account or Password is wrong"
+msgstr "账号或密码错误"
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:17
+msgid "Username"
+msgstr "用户名"
+
+#: E:\PHP\project\twl\module\User\view\user\index\register.phtml:20
+msgid "Register Team"
+msgstr "注册团队"
+
