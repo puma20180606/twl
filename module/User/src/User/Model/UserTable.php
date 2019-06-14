@@ -11,8 +11,11 @@ class UserTable
 	{
 		$this->tableGateway=$tableGateway;
 	}
+        public function getTableGateway(){
+            return $this->tableGateway;
+        }
 
-	/**
+        /**
 	 * 
 	 * Get the only one row for specific user
 	 */

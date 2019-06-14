@@ -30,7 +30,8 @@ define('MAX_IMAGE_WIDTH',60);
 define('STATICSALT','MouSe');
 class IndexController extends AbstractDailyController 
 {
-	public function mailAction()
+
+	public function mailAction()
 	{
 		$to='2450329248@qq.com';$header='From:support@icniot.cn\n';
 		mail($to,'mail','message',$header);return new JsonView();
@@ -154,8 +155,8 @@ class IndexController extends AbstractDailyController
 			$username	=$request->getPost('username');
 			//check the input against the DB
 			$usertable=$this->getServiceLocator()->get('User\Model\UserTable');
-			$result=$usertable->getOne(array('email'=>$email));
-			//if the user is a new user
+                        $result=$usertable->getOne(array('email'=>$email));
+                        //if the user is a new user
 			if(!$result->count()){
 				//the email input by user is not exist in the database
 			//	$teamtable=$this->getServiceLocator()->get('Team\Model\TeamTable');
@@ -173,12 +174,11 @@ class IndexController extends AbstractDailyController
 					'createtm'=>null,
 					'lastlogintm'=>null,
 					'allowed'	=>true,
-					'deleted'	=>false,
-				);
+					'deleted'	=>0
+				);                    
+                                
 				try{
-					if(!$usertable->insert($data)){
-						throw new  \Exception('Insert error');
-					}
+                                    $usertable->insert($data);
 				}	
 				catch (\Exception $exception){
 					//write into the system db log
@@ -186,22 +186,21 @@ class IndexController extends AbstractDailyController
 					return new ViewModel();
 				}
 			
-				$userid=$usertable->getUserId();
-insertteam:		$data=array(
+                                $userid=$usertable->getTableGateway()->getLastInsertValue();
+                               
+insertteam:                     $data=array(
 					'teamid'=>null,
 					'teamname'=>$teamName,
 					'createby'	=>$userid,
 					'managedby'	=>$userid,
-					'createtm'	=>null,
+					'createtm'	=>time(),
 					'membernum'	=>1,
 				);
-			
-				try {
-					$teamtable=$this->getServiceLocator()->get('Team\Model\TeamTable');
-					$teamtable->insert($data);	
+                         	try {
+                                    $teamtable=$this->getServiceLocator()->get('Team\Model\TeamTable');
+                                    $teamtable->insert($data);
 				}
 				catch (\Exception $exception){	
-			
 					return new ViewModel(array('Exception'=>$exception->getMessage()));
 				}
 				$teamid=$teamtable->getTeamId();
@@ -260,7 +259,8 @@ insertteam:		$data=array(
 		return new ViewModel(array('email'=>$email));
 	}
 	public function sendmail($subject,$body,$email)
-	{    
+	{
+    
 		$headers  = 'MIME-Version: 1.0' . "\n";
 		$headers .= 'Content-type: text/html; charset=utf-8' . "\n";
 
