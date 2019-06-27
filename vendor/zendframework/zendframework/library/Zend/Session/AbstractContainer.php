@@ -384,7 +384,7 @@ abstract class AbstractContainer extends ArrayObject
      * @param  mixed  $value
      * @return void
      */
-    public function offsetSet($key, $value)
+    public function &offsetSet($key, $value)
     {
         $this->expireKeys($key);
         $storage = $this->verifyNamespace();
