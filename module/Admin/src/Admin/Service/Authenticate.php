@@ -72,7 +72,8 @@ class Authenticate
 	 	$modulename	=ucfirst($temp[0]);
 	 	
 	 	$logger	=new Logger();
-		$writer =new Stream(ROOT."\\data\\error.log");
+		//$writer =new Stream(ROOT."\\data\\error.log");
+                $writer =new Stream(ROOT.DIRECTORY_SEPARATOR."data".DIRECTORY_SEPARATOR."error.log");
 		$logger->addWriter($writer);
 	 	$logger->warn("Role:$role,Modulename:$modulename,Controller:$controller,Action:$action");
 	 	
