@@ -3,7 +3,8 @@
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
-error_reporting(0);
+ini_set("display_errors", "On");
+error_reporting(E_ALL | E_STRICT);
 chdir(dirname(__DIR__));
 define ('ROOT', dirname(__DIR__));
 date_default_timezone_set('Asia/Chongqing');
