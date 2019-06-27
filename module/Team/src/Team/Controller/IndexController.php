@@ -81,7 +81,7 @@ class IndexController extends AbstractDailyController
 			);
 			$lang=\Locale::getDefault();
 			$body.=sprintf($format[$lang],$HOSTNAME,$teamname,$HOSTNAME,$session->teamid,$invitekey,$HOSTNAME,$session->teamid,$invitekey,$sender->email);
-			print_r($body);
+			
 			$html	=new Part($body);
 			$html->type='text/html';
 			$body	=new MimeMessage();
